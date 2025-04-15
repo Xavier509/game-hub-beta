@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Games from "./pages/Games";
+import GameDetails from "./pages/GameDetails";
 import AI from "./pages/AI";
 import Proxies from "./pages/Proxies";
 import NotFound from "./pages/NotFound";
@@ -24,6 +25,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/games" element={<Games />} />
+                <Route path="/games/:id" element={<GameDetails />} />
                 <Route path="/ai" element={<AI />} />
                 <Route path="/proxies" element={<Proxies />} />
                 <Route path="*" element={<NotFound />} />
