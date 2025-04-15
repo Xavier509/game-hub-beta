@@ -1,11 +1,34 @@
 
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Home, Gamepad2, Bot, Link as LinkIcon } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Home, Gamepad2, Bot, Link as LinkIcon, Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { useToast } from '@/components/ui/use-toast';
 
 const NavBar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchQuery, setSearchQuery] = useState('');
   
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      if (location.pathname !== '/games') {
+        navigate('/games');
+      }
+      // Add search param to URL
+      const searchParams = new URLSearchParams(window.location.search);
+      searchParams.set('search', searchQuery);
+      navigate({ search: searchParams.toString() });
+      
+      toast({
+        title: "Searching games",
+        description: `Showing results for "${searchQuery}"`,
+      });
+    }
+  };
+
   const getTabStyle = (path: string) => {
     const isActive = location.pathname === path;
     return `flex items-center gap-2 px-6 py-2 rounded-lg transition-all ${
@@ -17,18 +40,26 @@ const NavBar = () => {
 
   return (
     <nav className="flex flex-col items-center w-full gap-6">
-      <div className="text-logo font-italic">
+      <div className="text-logo font-playfair font-bold italic">
         <span className="text-purple-500">Game</span>
         <span className="text-white">Hub</span>
       </div>
       
-      <div className="w-full max-w-2xl">
-        <input
+      <form onSubmit={handleSearch} className="w-full max-w-2xl relative">
+        <Input
           type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search games, proxies..."
           className="w-full px-4 py-3 bg-gray-800/50 rounded-lg text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
-      </div>
+        <button
+          type="submit"
+          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white"
+        >
+          <Search size={20} />
+        </button>
+      </form>
 
       <div className="flex gap-2 p-1 bg-gray-800/30 rounded-lg">
         <Link to="/" className={getTabStyle('/')}>
