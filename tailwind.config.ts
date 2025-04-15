@@ -10,6 +10,12 @@ export default {
 	],
 	prefix: "",
 	theme: {
+    fontSize: {
+      'logo': ['2.5rem', { lineHeight: '1' }],
+    },
+    backgroundImage: {
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+    },
 		container: {
 			center: true,
 			padding: '2rem',
