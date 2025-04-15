@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Home, Gamepad2, Bot, Link as LinkIcon, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '@/hooks/use-toast';
 
 const NavBar = () => {
   const location = useLocation();
@@ -14,16 +13,10 @@ const NavBar = () => {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      if (location.pathname !== '/games') {
-        navigate('/games');
-      }
-      // Add search param to URL
-      const searchParams = new URLSearchParams(window.location.search);
-      searchParams.set('search', searchQuery);
-      navigate({ search: searchParams.toString() });
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
       
       toast({
-        title: "Searching games",
+        title: "Searching all sections",
         description: `Showing results for "${searchQuery}"`,
       });
     }
