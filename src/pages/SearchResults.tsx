@@ -43,20 +43,20 @@ const SearchResults = () => {
   const allProxies = [
     {
       id: 'alpha',
-      name: 'GameProxy Alpha',
-      url: 'https://proxy-alpha.gamehub.com',
+      name: 'Interstellar',
+      url: 'https://interstellarbynirbytes2.vercel.app/',
       status: 'online'
     },
     {
       id: 'beta',
-      name: 'GameProxy Beta',
-      url: 'https://proxy-beta.gamehub.com',
+      name: 'Shadow',
+      url: 'https://butidontwanttacos.duia.us/',
       status: 'online'
     },
     {
       id: 'delta',
-      name: 'GameProxy Delta',
-      url: 'https://proxy-delta.gamehub.com',
+      name: 'Space',
+      url: 'https://use.gurdit.com/',
       status: 'offline'
     }
   ];

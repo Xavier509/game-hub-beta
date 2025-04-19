@@ -27,15 +27,15 @@ const Home = () => {
           <div className="space-y-4">
             <div className="flex justify-between items-center">
               <div>
-                <h3 className="text-lg font-semibold text-white">GameProxy Alpha</h3>
-                <p className="text-sm text-gray-400">https://proxy-alpha.gamehub.com</p>
+                <h3 className="text-lg font-semibold text-white">Interstellar</h3>
+                <p className="text-sm text-gray-400">https://interstellarbynirbytes2.vercel.app/</p>
               </div>
               <Badge className="bg-green-500">Online</Badge>
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <h3 className="text-lg font-semibold text-white">GameProxy Beta</h3>
-                <p className="text-sm text-gray-400">https://proxy-beta.gamehub.com</p>
+                <h3 className="text-lg font-semibold text-white">Shadow</h3>
+                <p className="text-sm text-gray-400">https://butidontwanttacos.duia.us/</p>
               </div>
               <Badge className="bg-green-500">Online</Badge>
             </div>
