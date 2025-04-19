@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Send } from 'lucide-react';
@@ -20,10 +20,11 @@ const AI = () => {
     }
   ]);
   const [inputMessage, setInputMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSendMessage = () => {
-    if (!inputMessage.trim()) return;
+  const handleSendMessage = async () => {
+    if (!inputMessage.trim() || isLoading) return;
 
     // Add user message
     const userMessage: Message = {
@@ -32,20 +33,52 @@ const AI = () => {
       isUser: true
     };
 
-    // Simulate AI response
-    const aiResponse: Message = {
-      content: "I understand your question about gaming. While I'm a demo AI, I'd be happy to help you find information about games, strategies, or provide general assistance!",
-      timestamp: new Date().toLocaleTimeString(),
-      isUser: false
-    };
-
-    setMessages(prev => [...prev, userMessage, aiResponse]);
+    setMessages(prev => [...prev, userMessage]);
+    setIsLoading(true);
     setInputMessage('');
-    
-    toast({
-      title: "Message sent",
-      description: "Your message has been received!",
-    });
+
+    try {
+      // Make request to Arsturn API
+      const response = await fetch('https://www.arsturn.com/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: 'bot-gamehub',
+          message: inputMessage
+        })
+      });
+
+      if (!response.ok) throw new Error('Failed to get response');
+
+      const data = await response.json();
+      
+      // Add AI response
+      const aiResponse: Message = {
+        content: data.response || "I apologize, but I couldn't process that request. Could you try asking something else?",
+        timestamp: new Date().toLocaleTimeString(),
+        isUser: false
+      };
+
+      setMessages(prev => [...prev, aiResponse]);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to get response from AI",
+      });
+      
+      // Add error message
+      const errorResponse: Message = {
+        content: "I apologize, but I'm having trouble connecting right now. Please try again later.",
+        timestamp: new Date().toLocaleTimeString(),
+        isUser: false
+      };
+      
+      setMessages(prev => [...prev, errorResponse]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -74,11 +107,13 @@ const AI = () => {
               onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
               placeholder="Ask about games, strategies, or get help..."
               className="w-full bg-gray-700/50 rounded-lg pr-12 pl-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              disabled={isLoading}
             />
             <Button 
               className="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 p-2"
               size="icon"
               onClick={handleSendMessage}
+              disabled={isLoading}
             >
               <Send size={20} />
             </Button>
