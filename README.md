@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to GameHub
 
 ## Project info
 
@@ -7,12 +7,6 @@
 ## How can I edit this code?
 
 There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/c0861677-1e61-4de2-b787-91d2f4c57bb5) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -64,7 +58,7 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/c0861677-1e61-4de2-b787-91d2f4c57bb5) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my project?
 
 Yes, you can!
 
