@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Send } from 'lucide-react';
@@ -8,12 +9,6 @@ interface Message {
   content: string;
   timestamp: string;
   isUser: boolean;
-}
-
-declare global {
-  interface Window {
-    MindStudioSettings: any;
-  }
 }
 
 const AI = () => {
@@ -26,34 +21,6 @@ const AI = () => {
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const { toast } = useToast();
-
-  useEffect(() => {
-    // Configure MindStudio
-    window.MindStudioSettings = {
-      publicToken: "1b9f6ea7-56d8-43a6-aec3-f0301242af22",
-      appId: "07277833-06f8-43da-bcf7-6fa7ced95d50",
-      userId: "default-user",
-      targetId: "mindstudio-frame",
-      debugging: true,
-      options: {
-        autoFocus: false,
-        launchVariables: {
-          myVariable: "My Value"
-        }
-      }
-    };
-
-    // Load MindStudio script
-    const script = document.createElement('script');
-    script.src = "https://api.youai.ai/v1/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script when component unmounts
-      document.body.removeChild(script);
-    };
-  }, []);
 
   const handleSendMessage = () => {
     if (!inputMessage.trim()) return;
@@ -82,20 +49,8 @@ const AI = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4 space-y-6">
-      {/* MindStudio AI Frame */}
-      <Card className="w-full overflow-hidden">
-        <iframe
-          id="mindstudio-frame"
-          referrerPolicy="origin"
-          className="w-full h-[600px] border border-purple-500/20 rounded-lg outline-none"
-          title="AI Embed"
-          frameBorder="0"
-        />
-      </Card>
-
-      {/* Chat Interface */}
-      <Card className="bg-gray-800/50 border-purple-500/20 min-h-[400px] flex flex-col">
+    <div className="max-w-4xl mx-auto p-4">
+      <Card className="bg-gray-800/50 border-purple-500/20 min-h-[600px] flex flex-col">
         <div className="flex-1 p-4 overflow-y-auto">
           {messages.map((message, index) => (
             <div 
