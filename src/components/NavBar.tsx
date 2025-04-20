@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Home, Gamepad2, Link as LinkIcon, Search } from 'lucide-react';
+import { Home, Gamepad2, Bot, Link as LinkIcon, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 
@@ -62,6 +61,9 @@ const NavBar = () => {
         <Link to="/games" className={getTabStyle('/games')}>
           <Gamepad2 size={20} /> Games
         </Link>
+        <Link to="/ai" className={getTabStyle('/ai')}>
+          <Bot size={20} /> AI
+        </Link>
         <Link to="/proxies" className={getTabStyle('/proxies')}>
           <LinkIcon size={20} /> Proxies
         </Link>
@@ -71,4 +73,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
