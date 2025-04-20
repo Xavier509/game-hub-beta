@@ -8,7 +8,6 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Games from "./pages/Games";
 import GameDetails from "./pages/GameDetails";
-import AI from "./pages/AI";
 import Proxies from "./pages/Proxies";
 import SearchResults from "./pages/SearchResults";
 import NotFound from "./pages/NotFound";
@@ -27,13 +26,16 @@ const App = () => (
                 <Route path="/" element={<Home />} />
                 <Route path="/games" element={<Games />} />
                 <Route path="/games/:id" element={<GameDetails />} />
-                <Route path="/ai" element={<AI />} />
                 <Route path="/proxies" element={<Proxies />} />
                 <Route path="/search" element={<SearchResults />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
           </BrowserRouter>
+        </div>
+        {/* Add persistent chat widget */}
+        <div className="fixed bottom-4 right-4 z-50">
+          <div id="arsturn-widget" className="w-96 h-[600px] rounded-lg shadow-xl bg-white" />
         </div>
       </div>
       <Toaster />
