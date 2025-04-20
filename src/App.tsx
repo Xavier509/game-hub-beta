@@ -11,6 +11,7 @@ import GameDetails from "./pages/GameDetails";
 import Proxies from "./pages/Proxies";
 import SearchResults from "./pages/SearchResults";
 import NotFound from "./pages/NotFound";
+import AIWidget from "./components/AIWidget";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           </BrowserRouter>
         </div>
       </div>
+      <AIWidget />
       <Toaster />
       <Sonner />
     </TooltipProvider>
@@ -41,4 +43,3 @@ const App = () => (
 );
 
 export default App;
-
