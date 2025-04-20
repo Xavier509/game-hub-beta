@@ -1,6 +1,6 @@
+
 import React, { useEffect } from 'react';
 import { Card } from '@/components/ui/card';
-
 
 declare global {
   interface Window {
@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-const AI = () => {
+const AIWidget = () => {
   useEffect(() => {
     // Configure Arsturn widget
     window.username = "bot-gamehub";
@@ -33,12 +33,12 @@ const AI = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <Card className="bg-gray-800/50 border-purple-500/20 min-h-[600px]">
+    <div className="fixed bottom-4 right-4 z-50">
+      <Card className="bg-gray-800/50 border-purple-500/20 w-[350px] h-[500px]">
         {/* Arsturn widget will be injected here */}
       </Card>
     </div>
   );
 };
 
-export default AI;
+export default AIWidget;
