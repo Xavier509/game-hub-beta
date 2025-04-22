@@ -1,8 +1,30 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const Home = () => {
+  useEffect(() => {
+    // Configure Arsturn widget
+    window.username = "bot-gamehub";
+    window.widgetColor = "black";
+    window.widgetBackgroundColor = "#ffffff";
+
+    // Load Arsturn script
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.src = "https://www.arsturn.com/widget.js";
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script when component unmounts
+      if (script && document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <div className="flex flex-col gap-8 p-4">
       <section className="text-center mt-8">
