@@ -37,7 +37,7 @@ const GAMES = [
     id: 5,
     title: 'Basket Random',
     description: 'Fun basketball shooting game with random elements',
-    image: '/lovable-uploads/86e173c1-437e-4e59-b4b1-015d91266e34.png',
+    image: 'https://play-lh.googleusercontent.com/gP8T5Z1O-ngxIloiwcBZzrzyLPYDp0R_1BDNKUDZboIRPVImeyWI8-7aExvB9gAGNKc',
     category: 'sports',
     url: 'https://basketrandom.github.io/'
   },
@@ -45,7 +45,7 @@ const GAMES = [
     id: 6,
     title: 'Retro Bowl',
     description: 'Classic American football game with retro graphics',
-    image: '/lovable-uploads/55adda84-142c-4579-bc82-d9d479615eae.png',
+    image: 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=204,height=204,fit=cover,f=auto/ee9ca3764ef4289a48a1ebf457ef605441ed1f35a0f2eb12707a70d609e53686.png',
     category: 'sports',
     url: 'https://unblocked1889.github.io/retro-bowl-unblocked/'
   },
@@ -53,7 +53,7 @@ const GAMES = [
     id: 7,
     title: 'Drift Hunters',
     description: 'Master the art of drifting in this realistic racing game',
-    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    image: 'https://imgs.crazygames.com/games/drift-hunters/cover-1656950639575.png?metadata=none&quality=40&width=1200&height=630&fit=crop',
     category: 'racing',
     url: 'https://ad-freegames.github.io/drift-hunters/'
   },
@@ -61,7 +61,7 @@ const GAMES = [
     id: 8,
     title: 'Escape Road',
     description: 'Navigate through challenging roads and obstacles',
-    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    image: 'https://1games.io/data/image/game/escape-road/1024-x-768.png',
     category: 'racing',
     url: 'https://escaperoad.world.site/'
   },
