@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
@@ -92,7 +93,7 @@ const GAMES = [
     id: 12,
     title: 'Drive Mad',
     description: 'Crazy driving challenges and stunts',
-    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    image: 'https://www.freegames.com/cdn-cgi/image/quality=78,format=auto/thumb/300x300/Drive-Mad.jpg',
     category: 'racing',
     url: 'https://bluepotato102.github.io/drive-mad/'
   },
