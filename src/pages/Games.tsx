@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
@@ -32,6 +31,14 @@ const GAMES = [
     description: 'High-speed racing simulation',
     image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
     category: 'racing'
+  },
+  {
+    id: 5,
+    title: 'Basket Random',
+    description: 'Fun basketball shooting game with random elements',
+    image: '/lovable-uploads/86e173c1-437e-4e59-b4b1-015d91266e34.png',
+    category: 'sports',
+    url: 'https://basketrandom.github.io/'
   }
 ];
 
@@ -41,7 +48,6 @@ const Games = () => {
   const [searchQuery, setSearchQuery] = useState(searchParams.get('search') || '');
   const [selectedCategory, setSelectedCategory] = useState('All Games');
 
-  // Update search when URL param changes
   useEffect(() => {
     const searchFromUrl = searchParams.get('search');
     if (searchFromUrl) {
@@ -76,6 +82,7 @@ const Games = () => {
           <option>Action</option>
           <option>Adventure</option>
           <option>Racing</option>
+          <option>Sports</option>
         </select>
       </div>
 
