@@ -39,6 +39,78 @@ const GAMES = [
     image: '/lovable-uploads/86e173c1-437e-4e59-b4b1-015d91266e34.png',
     category: 'sports',
     url: 'https://basketrandom.github.io/'
+  },
+  {
+    id: 6,
+    title: 'Retro Bowl',
+    description: 'Classic American football game with retro graphics',
+    image: '/lovable-uploads/55adda84-142c-4579-bc82-d9d479615eae.png',
+    category: 'sports',
+    url: 'https://unblocked1889.github.io/retro-bowl-unblocked/'
+  },
+  {
+    id: 7,
+    title: 'Drift Hunters',
+    description: 'Master the art of drifting in this realistic racing game',
+    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    category: 'racing',
+    url: 'https://ad-freegames.github.io/drift-hunters/'
+  },
+  {
+    id: 8,
+    title: 'Escape Road',
+    description: 'Navigate through challenging roads and obstacles',
+    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    category: 'racing',
+    url: 'https://escaperoad.world.site/'
+  },
+  {
+    id: 9,
+    title: 'Soccer Random',
+    description: 'Unpredictable and fun soccer gameplay',
+    image: '/lovable-uploads/86e173c1-437e-4e59-b4b1-015d91266e34.png',
+    category: 'sports',
+    url: 'https://ubg98.github.io/SoccerRandom/'
+  },
+  {
+    id: 10,
+    title: 'Impossible Quiz',
+    description: 'Test your wit with impossible questions',
+    image: '/lovable-uploads/c77b7a21-7d50-4bad-84a3-5bb864abdc1b.png',
+    category: 'puzzle',
+    url: 'https://theimpossiblequizunblocked.github.io/'
+  },
+  {
+    id: 11,
+    title: 'Cookie Clicker',
+    description: 'The addictive cookie-clicking phenomenon',
+    image: '/lovable-uploads/86e173c1-437e-4e59-b4b1-015d91266e34.png',
+    category: 'idle',
+    url: 'https://ozh.github.io/cookieclicker/'
+  },
+  {
+    id: 12,
+    title: 'Drive Mad',
+    description: 'Crazy driving challenges and stunts',
+    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    category: 'racing',
+    url: 'https://bluepotato102.github.io/drive-mad/'
+  },
+  {
+    id: 13,
+    title: 'Slope',
+    description: 'Fast-paced 3D ball rolling game',
+    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    category: 'action',
+    url: 'https://cgolden15.github.io/Slope-Game/'
+  },
+  {
+    id: 14,
+    title: 'Polytrack',
+    description: 'Minimalist racing on polygon tracks',
+    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    category: 'racing',
+    url: 'https://joe-the-chicken.github.io/polytrack/'
   }
 ];
 
@@ -83,6 +155,8 @@ const Games = () => {
           <option>Adventure</option>
           <option>Racing</option>
           <option>Sports</option>
+          <option>Puzzle</option>
+          <option>Idle</option>
         </select>
       </div>
 
