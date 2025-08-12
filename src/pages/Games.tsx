@@ -49,7 +49,7 @@ const GAMES = [
     id: 6,
     title: 'Soccer Random',
     description: 'Unpredictable and fun soccer gameplay',
-    image: '/lovable-uploads/86e173c1-437e-4e59-b4b1-015d91266e34.png',
+    image: '/src/assets/cover_16x9-1732744645362.png',
     category: 'sports',
     url: 'https://ubg98.github.io/SoccerRandom/'
   },
@@ -57,7 +57,7 @@ const GAMES = [
     id: 7,
     title: 'Impossible Quiz',
     description: 'Test your wit with impossible questions',
-    image: '/lovable-uploads/c77b7a21-7d50-4bad-84a3-5bb864abdc1b.png',
+    image: '/src/assets/poki-the-impossible-quiz-social-preview.png',
     category: 'puzzle',
     url: 'https://theimpossiblequizunblocked.github.io/'
   },
@@ -65,7 +65,7 @@ const GAMES = [
     id: 8,
     title: 'Cookie Clicker',
     description: 'The addictive cookie-clicking phenomenon',
-    image: '/lovable-uploads/86e173c1-437e-4e59-b4b1-015d91266e34.png',
+    image: '/src/assets/cookie-clicker.jpg',
     category: 'idle',
     url: 'https://ozh.github.io/cookieclicker/'
   },
@@ -89,7 +89,7 @@ const GAMES = [
     id: 11,
     title: 'Polytrack',
     description: 'Minimalist racing on polygon tracks',
-    image: '/lovable-uploads/90fe6f8a-88e0-4846-b923-a353273ae95b.png',
+    image: '/src/assets/polytrack.webp',
     category: 'racing',
     url: 'https://joe-the-chicken.github.io/polytrack/'
   },
@@ -129,7 +129,7 @@ const GAMES = [
     id: 16,
     title: 'Geometry Dash',
     description: 'Rhythm-based platformer with geometric challenges',
-    image: '/src/assets/geometry-dash.png',
+    image: '/src/assets/Geometry_Dash_logo.png',
     category: 'action',
     url: 'https://open-gd.github.io/OpenGD/'
   },
@@ -177,7 +177,7 @@ const GAMES = [
     id: 22,
     title: 'Flappy Bird',
     description: 'Navigate through pipes in this challenging arcade game',
-    image: '/src/assets/flappy-bird.png',
+    image: '/src/assets/250px-Flappy_Bird_icon.png',
     category: 'arcade',
     url: 'https://ellisonleao.github.io/clumsy-bird/'
   },
@@ -217,7 +217,7 @@ const GAMES = [
     id: 27,
     title: 'Rooftop Snipers',
     description: 'Two-player sniper battles on rooftops',
-    image: '/src/assets/rooftop-snipers.png',
+    image: '/src/assets/rooftop-snipers_1x1-cover.png',
     category: 'action',
     url: 'https://susorodni.github.io/rooftopsnipers/'
   },
